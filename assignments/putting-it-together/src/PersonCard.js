@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styles from './PersonCard.module.css'
 
 const PersonCard = (props) => {
     const { firstName, lastName, hairColor, age} = props;
@@ -22,7 +23,7 @@ const PersonCard = (props) => {
             <p>
                 Hair Color: {hairColor}
             </p>
-            <button onClick={ handleClick }>Birthday Button for {firstName} {lastName}</button>
+            <button className={styles.btn} onClick={ handleClick }>Birthday Button for {firstName} {lastName}</button>
         </div>
     )
 }
