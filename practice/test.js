@@ -39,3 +39,13 @@ parentFunction( exampleFunction );
 
 const groceries = ["pearl onions", "cremini mushrooms", "thyme"];
 const groceryList = groceries.map( item => `<li>${item}</li>` );
+
+const nums = [1,2,3,4,5]
+
+function double(nums){
+  return nums * 2;
+}
+
+const newNums = nums.map(double)
+
+console.log(newNums);
