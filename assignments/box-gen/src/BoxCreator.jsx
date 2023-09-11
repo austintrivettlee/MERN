@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './BoxCreator.module.css'
 
 const BoxCreator = () => {
@@ -14,6 +14,7 @@ const BoxCreator = () => {
     e.preventDefault();
 
     if (color.trim() === "") {
+      setColor("")
       return;
     }
 
@@ -48,8 +49,8 @@ const BoxCreator = () => {
             key={index}
             style={{
               backgroundColor: box.color,
-              width: "100px", // Set a fixed width
-              height: "100px", // Set a fixed height
+              width: "100px", 
+              height: "100px",
             }}
           ></div>
         ))}
