@@ -4,7 +4,7 @@ import BoxCreator from './BoxCreator';
 
 function App() {
   return (
-    <BoxCreator></BoxCreator>
+    <BoxCreator>wadsad</BoxCreator>
   );
 }
 
