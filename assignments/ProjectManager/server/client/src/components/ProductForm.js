@@ -4,13 +4,13 @@ import axios from 'axios';
 export default () => {
     //keep track of what is being typed via useState hook
     const [title, setTitle] = useState(""); 
-    const [price, setprice] = useState(0);
+    const [price, setPrice] = useState(0);
     const [desc, setDesc] = useState("");
     //handler when the form is submitted
     const onSubmitHandler = e => {
         //prevent default behavior of the submit
         e.preventDefault();
-        axios.post('http://localhost:8000/api/product', {
+        axios.post('http://localhost:8000/api/products/new', {
             title,
             price,
             desc
@@ -27,7 +27,7 @@ export default () => {
             </p>
             <p>
                 <label>Price</label><br/>
-                <input type="number" onChange={(e)=>setprice(e.target.value)} value={price}/>
+                <input type="number" onChange={(e)=>setPrice(e.target.value)} value={price}/>
             </p>
             <p>
                 <label>Description</label><br/>
